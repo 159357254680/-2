@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            list-style: none;
+        }
+
+        button{
+            background-color: white;
+            border: transparent;
+        }
+
+        .header{
+            display: flex;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo img{
+            width: 50px;
+            height: 50px;
+        }
+
+        .logo{
+            top: 0;
+            position: absolute;
+            left: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            width: 200px;
+            height: 60px;
+        }   
+
+        .logo p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 180px;
+            height: 35px;
+            background-color: white;
+            border-radius: 15px;
+        }
+
+        .menu{
+            top: 0;
+            position: absolute;
+            left: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 325px;
+            height: 60px;
+            gap: 20px;
+        }
+
+        .menu a{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 85px;
+            height: 35px;
+            background-color: white;
+            border-radius: 15px;
+            color: black;
+        }
+
+        .search{
+            top: 15px;
+            position: absolute;
+            left: 570px;
+            width: 500px;
+            height: 30px;
+        }
+
+        .sea{
+            outline: none;
+            border: 1px solid gray;
+            border-radius: 10px;
+            width: 500px;
+            height: 30px;
+        }
+
+        .logsign{
+            top: 15px;
+            position: absolute;
+            right: 30px;
+            width: 150px;
+            height: 30px;
+            gap: 15px;
+        }
+
+        .btn{
+            width: 65px;
+            height: 30px;
+            border: 1px solid blue;
+            color: blue;
+            border-radius: 10px;
+        }
+
+        .line {
+            position: absolute;
+            top: 60px;
+            height: 0px;
+            width: 100vw;
+            border: 1px dashed darkgray;
+        }
+
+        .logo p:hover {
+            background-color: darkgray;
+        }
+
+        .menu a:hover{
+           background-color: darkgray;
+        }
+
+        .logsign .btn:hover{
+            background-color: blue;
+            color: white;
+        }
+
+
+
+
+        
+        .side1{
+            margin-left: 0px;
+            margin-top: 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 50px;
+        }
+
+        .side1 a{
+            display: flex;
+            width: 100px;
+            color: black;
+        }
+
+        .menus1{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 7px;
+            width: 80px;
+            height: 120px;
+        }
+
+        .menus2{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 7px;
+            width: 80px;
+            height: 80px;
+        }
+
+        .menus3{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 7px;
+            width: 80px;
+            height: 80px;
+        }
+
+        .coll .up{
+            cursor: pointer;
+            position: absolute;
+            top: 537.5px;
+            left: 138px;
+            height: 20px;
+            width: 5px;
+            background-color: black;
+        }
+
+        .coll .left{
+            cursor: pointer;
+            position: absolute;
+            top: 545px;
+            left: 130px;
+            width: 20px;
+            height: 5px;
+            background-color: black;
+
+        }
+
+        .bx{
+            width: 150px;
+            height: 80px;
+        }
+
+        .side1 h3{
+            margin-top: 25px;
+        }
+
+        .learn{
+            margin-top: 25px;
+            width: 155px;
+            height: 500px;
+        }
+
+        .learn button{
+            border: 1px solid black;
+            margin-top: 20px;
+            border-radius: 10px;
+            width: 140px;
+            height: 30px;
+        }
+
+        .lineside{
+            position: absolute;
+            top: 60px;
+            left: 150px;
+            height: 1000px;
+            width: 0;
+            border: 1px dashed darkgray;
+        }
+
+
+
+        .side1 a:hover{
+            background-color: darkgray;
+        }
+
+        .side1 a:focus{
+            background-color: gray;
+        }
+
+        .learn button:hover{
+            background-color: rgb(255, 128, 0);
+            color: white;
+            border: 1px solid rgb(255, 128, 0);
+        }
+
+
+
+
+
+        .title{
+            width: 1080px;
+            height: 200px;
+            margin-left: 180px;
+            margin-top: -1150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .ask{
+            position: absolute;
+            top: 80px;
+            right: 60px;
+            width: 110px;
+            height: 30px;
+            border: 1px solid blue;
+            border-radius: 10px;
+            color: blue;
+
+        }
+
+        .tit{
+            top: 80px;
+            left: 200px;
+            position: absolute;
+            width: 800px;
+            height: 150px;
+            font-size: 24px;
+        }
+
+        .time {
+            left: 200px;
+            position: absolute;
+            top: 160px;
+        }
+
+        .line2{
+            position: absolute;
+            left: 160px;
+            top: 200px;
+            height: 0px;
+            width: 100vw;
+            border: 1px dashed darkgray;
+        }
+
+        .ask:hover{
+            background-color: blue;
+            color: white;
+        }
+
+
+
+        .side2{
+            top: -55px;
+            position: relative;
+            left: 850px;
+            width: 400px;
+            height: 1000px;
+        }
+        .tit1{
+            box-sizing: border-box;
+            padding: 10px 40px;
+            background-color: khaki;
+            width: 400px;
+            height: 50px;
+        }
+        .con{
+            display: flex;
+            box-sizing: border-box;
+            padding: 12px 30px ;
+            border: 0.1px solid khaki;
+            background-color: rgb(248, 243, 195);
+            width: 400px;
+            height: 50px;
+        }
+
+
+        .rel .tx{
+            position: relative;
+            top: -40px;
+            left: 80px;
+        }
+        .rel button{
+            margin-bottom: 8px;
+            width: 50px;
+            height: 30px;
+            background-color: green;
+            color: white;
+            border: transparent;
+        }
+        
+        .side2 a:hover{
+            color:red;
+        }
+
+
+
+
+
+
+        .main{
+            position: relative;
+            right: 600px;
+            bottom: 1100px;
+        }
+
+        .main .ma{
+            font-size: 22px;
+        }
+
+        .tip{
+            margin-top: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .tip a{
+            padding: 5px 3px;
+            color: black;
+            background-color: darkgray;
+        }
+
+        .head{
+            width: 200px;
+            height: 100px;
+            background-color: lightskyblue;
+            position: absolute;
+            top: 400px;
+            right: -120px;
+            transition: 1s;
+        }
+
+        .head img{
+            margin-top: 0px;
+            cursor: pointer;
+            padding: 5px;
+            width: 50px;
+            height: 50px;
+            background-size: cover;
+        }
+
+        .name{
+            margin-top: 0px;
+            color: blue;
+            position: absolute;
+            
+        }
+
+        .inf{
+            margin-left: 60px;
+            margin-top: -40px;
+            display: flex;
+            gap: 8px;
+        }
+
+        .line3{
+            position: relative;
+            right: 720px;
+            top: -900px;
+            width: 700px;
+            height: 0;
+            border: 1px dashed gray;
+       }
+
+
+        .tip a:hover{
+            color:red;
+        }
+
+       
+
+       .hide{
+            position: absolute;
+            top: 420px;
+            left: 320px;
+            background-color: rgb(76, 75, 75);
+            width: 300px;
+            height: 180px;
+            display: none;
+       }
+
+        .hide p{
+            color: white;
+        }
+
+        .hide a{
+            color: cornflowerblue;
+        }
+
+        .hide img{
+            width: 50px;
+            height: 50px;
+        }
+
+        .hide .name2{
+            font-size: 24px;
+           margin-left: 80px;
+           margin-top: -40px;
+        }
+
+        .hide .star{
+            margin: 10px;
+            margin-left: 80px;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        
+        .hide .address{
+            margin-left: 80px;
+            margin-top: 0px;
+        }
+
+       .answer{
+            position: relative;
+            left: 170px;
+            top: -430px;
+       }    
+
+       .answer a{
+        color: lightskyblue;
+       }
+
+       .boxs1{
+            width: 250px;
+            height: 200px;
+            margin-bottom: 20px;
+
+       }
+
+       .boxs1 button{
+            border: 1px solid black;
+            margin-top: 20px;
+            text-align: center;
+            width: 250px;
+            height: 30px;
+            background-color: white;
+            cursor: pointer;
+       }
+
+       .boxs2{
+            position: absolute;
+            top: 260px;
+            left: 350px;
+       }
+
+       .boxs2 input{
+            outline: none;
+            width: 300px;
+            height: 25px;
+       }
+
+       .boxs3{
+        display: flex;
+        gap: 10px  ;
+       }
+
+       .post{
+        border: 1px solid black;
+        cursor: pointer;
+        width: 200px;
+        height: 25px;
+        color: blue;
+       }
+
+       .boxss3{
+        width: 550px;
+        height: 50px;
+       }
+
+       .boxss3 a{
+        color: lightskyblue;
+       }
+
+       .answer a:hover{
+            color: red;
+       }
+
+       .boxs1 button:hover{
+            border: 1px solid blue;
+            color: white;
+            background-color: blue;
+       }
+
+       .post:hover{
+            border: 1px solid blue;
+            color: white;
+            background-color: blue;
+       }
+
+
+
+       .bottom{
+        position: relative;
+        top: -500px;
+        width: 1400px;
+        height: 800px;
+        background-color: rgb(75, 74, 74);
+        display: flex;
+        gap: 100px;
+       }
+
+       .bottom a{
+        color:white;
+       }
+       
+       .bottom ul{
+        line-height: 30px;
+       }
+
+       .bottom a:hover{
+        color: red;
+       }
+    </style>
+
+
+</head>
+<body>
+    <class="box">
+        <div class="header">
+            <div class="logo">
+                <svg t="1731738065722" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4208" width="200" height="200"><path d="M620.714667 895.829333L213.376 896 213.333333 808.832l407.338667-0.213333 0.042667 87.210666zM896 402.133333L826.325333 0l-85.76 14.933333 69.674667 402.090667 85.76-14.933333z m-265.472 294.698667l-405.632-37.418667-7.978667 86.826667 405.632 37.376 7.978667-86.784z m26.752-113.749333l-393.386667-105.941334-22.613333 84.181334 393.429333 105.984 22.613334-84.224z m51.370667-99.712L357.76 276.053333 313.6 351.146667l350.890667 207.36 44.202666-75.093334z m86.016-61.013334l-229.504-337.237333-71.893334 49.066667 229.546667 337.237333 71.850667-49.066667z" fill="#FF810F" p-id="4209"></path><path d="M697.770667 597.333333v357.973334h-541.866667V597.333333H85.333333v426.666667h682.666667V597.333333z" fill="#BEBCBC" p-id="4210"></path></svg>
+                <p>stack <b>overflow</b></p>
+            </div>
+            <div class="menu">
+                <a href="">About</a>
+                <a href="">Products</a>
+                <a href="">OverflowAI</a>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="search..." class="sea">
+            </div>
+            <div class="logsign">
+                <button class="btn">Log in</button>
+                <button class="btn">Sign in</button>
+            </div>
+
+            <div class="line"></div>
+        </div>
+
+
+
+
+       <div class="side1">
+            <div class="menus1">
+                <a href="">
+                    <svg t="1731740971338" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="897" width="20" height="20"><path d="M925.67552 336.03584c10.38336 17.63328 15.79008 37.35552 16.40448 59.22816v424.18176c-1.10592 34.7136-13.14816 63.52896-36.12672 86.50752-22.97856 22.97856-51.79392 35.0208-86.50752 36.12672H204.55424c-34.7136-1.10592-63.5904-13.14816-86.50752-36.12672-22.97856-22.97856-35.0208-51.79392-36.12672-86.50752V395.264c0-21.8112 5.59104-41.59488 16.77312-59.22816 11.18208-17.63328 26.05056-32.62464 44.544-44.91264l307.44576-190.70976c19.0464-12.288 40.42752-18.49344 64.26624-18.49344 23.77728 0 45.21984 6.144 64.26624 18.49344l307.44576 190.70976c15.60576 12.288 28.63104 27.27936 39.0144 44.91264zM679.54688 556.544c10.93632-11.18208 16.40448-26.05056 16.40448-44.544 0-18.49344-5.46816-33.30048-16.40448-44.544-10.93632-11.18208-25.92768-16.77312-44.91264-16.77312H389.36576c-19.0464 0-34.03776 5.59104-44.91264 16.77312-10.93632 11.18208-16.40448 26.05056-16.40448 44.544 0 18.49344 5.46816 33.30048 16.40448 44.544 10.93632 11.18208 25.86624 16.77312 44.91264 16.77312h245.26848c18.98496 0 33.97632-5.59104 44.91264-16.77312z m0 245.69856c10.93632-10.93632 16.40448-25.74336 16.40448-44.544 0-18.7392-5.46816-33.60768-16.40448-44.544-10.93632-10.93632-25.92768-16.65024-44.91264-17.2032H389.36576c-19.0464 0.55296-34.03776 6.32832-44.91264 17.2032-10.87488 10.87488-16.40448 25.74336-16.40448 44.544 0 18.7392 5.46816 33.60768 16.40448 44.544 10.93632 10.93632 25.86624 16.65024 44.91264 17.2032h245.26848c18.98496-0.55296 33.97632-6.26688 44.91264-17.2032z" p-id="898"></path></svg>
+                    <b>Home</b></a>
+                <a href="">
+                    <svg t="1731741052533" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="11937" width="20" height="20"><path d="M514.1 926c78.5 0 151.9-21.9 214.4-59.8L928.1 926l-82-166.6c51.5-69 82-154.7 82-247.4 0-228.6-185.4-414-414-414s-414 185.4-414 414 185.4 414 414 414zM361.9 424.1c0.9-33.5 4.9-59 11.9-76.5s18.2-33.1 33.5-46.8c15.4-13.7 32.5-23.9 51.3-30.4s38.8-9.8 59.7-9.8c42.4 0 77.6 12.5 105.8 37.4 28.2 24.9 42.3 58.1 42.3 99.5 0 18.6-3.6 35.5-10.8 50.6-7.2 15.1-22.6 34-46.1 56.6s-39.1 38.6-46.8 48.2c-7.7 9.5-13.5 20.9-17.5 34.2s-5.7 31.1-5.2 53.4h-61.5c0-26.1 2.1-46.9 6.3-62.5s10.5-29.2 18.9-40.9c8.4-11.6 23.5-28.8 45.4-51.3 21.9-22.6 36-39 42.3-49.2 6.3-10.2 9.4-25.5 9.4-45.7 0-20.3-7.2-38.2-21.6-53.8-14.4-15.6-35.4-23.4-62.9-23.4-61.9 0-92.9 36.8-92.9 110.3h-61.5v0.1z m182.9 344.3h-67.7v-71.2h67.7v71.2z" fill="#351C1C" p-id="11938"></path></svg>
+                    <b>Questions</b></a>
+                <a href="">
+                    <svg t="1731741086616" class="icon" viewBox="0 0 1090 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1983" width="20" height="20"><path d="M992 64 768 64c-52.8 0-126.56 30.56-163.872 67.872L227.872 508.128c-37.344 37.344-37.344 98.432 0 135.776l280.224 280.224c37.344 37.344 98.432 37.344 135.776 0l376.224-376.224C1057.44 510.56 1088 436.8 1088 384L1088 160C1088 107.2 1044.8 64 992 64zM864 384c-53.024 0-96-42.976-96-96s42.976-96 96-96 96 42.976 96 96S917.024 384 864 384zM86.624 598.624 428.992 940.992C392.736 960.16 346.528 954.528 316.128 924.128L35.872 643.872C-1.44 606.56-1.44 545.44 35.872 508.128L412.128 131.872C449.44 94.56 523.2 64 576 64L86.624 553.376C74.176 565.824 74.176 586.176 86.624 598.624Z" fill="#000000" p-id="1984"></path></svg>
+                    <b>Tags</b></a>
+            </div>
+
+            <div class="menus2">
+                <a href="">
+                    <svg t="1731741121646" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4212" width="20" height="20"><path d="M528.936186 271.549061m-234.809307 0a41.6 41.6 0 1 0 469.618613 0 41.6 41.6 0 1 0-469.618613 0Z" fill="#555555" p-id="4213"></path><path d="M947.190263 738.345447C938.723582 427.336005 730.443211 465.718295 730.443211 465.718295c-51.928981 42.903499-97.649063 81.280145-197.555907 81.280145-129.822453 0-211.102598-82.973481-211.102598-82.973481C110.682108 456.122723 107.859881 738.909893 107.859881 738.909893l0 124.177999c3.945474 65.475672 49.6712 101.600181 112.88909 101.600181l609.601085 0c76.200136 0 110.631308-45.155636 117.404653-101.600181C951.705827 767.696611 947.190263 738.345447 947.190263 738.345447z" fill="#555555" p-id="4214"></path><path d="M528.936186 546.99844" fill="#555555" p-id="4215"></path></svg>
+                    <b>Users</b></a>
+                <a href="">
+                    <svg t="1731741163259" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5203" width="20" height="20"><path d="M320 64h640v896H320V64zM64 384h256v576H64V384z m384 64v128h128V448H448z m256 0v128h128V448h-128zM448 192v128h128V192H448z m256 0v128h128V192h-128zM192 512v128h128V512H192z m384 256v192h128v-192H576z m-384 0v192h128v-192H192z" fill="#505050" p-id="5204"></path></svg>
+                    <b>Companies</b></a>
+            </div>
+
+            <div class="menus3">
+                <h3>LABS</h3>
+                <a href="">
+                    <svg t="1731741202116" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6224" width="20" height="20"><path d="M972.8 1024H51.2A51.2 51.2 0 0 1 0 972.8V358.4a51.2 51.2 0 0 1 51.2-51.2h921.6a51.2 51.2 0 0 1 51.2 51.2v614.4a51.2 51.2 0 0 1-51.2 51.2zM102.4 921.6h819.2v-512H102.4v512z m614.4-716.8H614.4V102.4H409.6v102.4H307.2V51.2A51.2 51.2 0 0 1 358.4 0h307.2a51.2 51.2 0 0 1 51.2 51.2v153.6zM256 576h192v128H256V576z m320 0h192v128H576V576z" p-id="6225"></path></svg>
+                    <b>Jobs</b></a>
+                <a href="">
+                    <b>Discussions</b>
+                </a>
+            </div>
+
+            <div class="other">
+                <div class="coll">
+                    <h3>COLLECTIVES</h3>
+                    <div class="up"></div>
+                    <div class="left"></div>
+                </div>
+                <div class="bx">
+                    <p>Communities for your favorite techologies <b>Explore all</b></p>
+                </div>
+
+                <h3>TERMS</h3>
+
+                <div class="learn">
+                    <svg t="1731738065722" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4208" width="100px" height="100px"><path d="M620.714667 895.829333L213.376 896 213.333333 808.832l407.338667-0.213333 0.042667 87.210666zM896 402.133333L826.325333 0l-85.76 14.933333 69.674667 402.090667 85.76-14.933333z m-265.472 294.698667l-405.632-37.418667-7.978667 86.826667 405.632 37.376 7.978667-86.784z m26.752-113.749333l-393.386667-105.941334-22.613333 84.181334 393.429333 105.984 22.613334-84.224z m51.370667-99.712L357.76 276.053333 313.6 351.146667l350.890667 207.36 44.202666-75.093334z m86.016-61.013334l-229.504-337.237333-71.893334 49.066667 229.546667 337.237333 71.850667-49.066667z" fill="#FF810F" p-id="4209"></path><path d="M697.770667 597.333333v357.973334h-541.866667V597.333333H85.333333v426.666667h682.666667V597.333333z" fill="#BEBCBC" p-id="4210"></path></svg>
+                    <p><b>NOW available on Stack Overflow for Teams!</b>AI features where you work,search,IDE,and chat</p>
+                    <button>Learn more</button>
+                    <button>Explore Teams</button>
+                </div>
+
+
+
+            </div>
+
+            <div class="lineside"></div>
+       </div>
+
+
+
+
+       <div class="title">
+            <div class="tit">
+                <p>What does and doesn't cause repains/reflowx when inside requestionAnimationFrame?</p>
+            </div>
+            <button class="ask">Ask Question</button>
+            <div class="time">
+                <p>Asked <b>8 years,7 months ago </b>Modified <b>8 years, 7 months ago</b> Viewed <b>2k times</b></p>
+            </div>
+            <div class="line2"></div>
+       </div>
+
+
+       <div class="side2">
+            <div class="table1">
+                <div class="tit1"><p>The Overflow Blog</p></div>
+                <div class="con"><p>Asstudent of Geoff Hinton ,Yann LeCun and Jeff Dean explains where AI is headed</p></div>
+                <div class="con">Meet the guy responsible for building the Call of Duty game engine</div>
+            </div>
+            <div class="table2">
+                <div class="tit1"><p>Featured on Meta</p></div>
+                <div class="con"><input type="checkbox"><p>More network sites to see advertising test</p></div>
+                <div class="con"><input type="checkbox"><p>We're (finally) going to the cloud!</p></div>
+                <div class="con">Call foor testres for an early access release of a Stack Overflow extension</div>
+            </div>
+            <div class="related">
+                <h2>Related</h2>
+                <div class="rel">
+                    <button>8512</button>
+                    <div class="tx"><a href="">What does"use strict" do in JavaScript and what is the reasoning behend it?</a></div>
+                </div>
+                <div class="rel">
+                    <button>1928</button>
+                    <div class="tx"><a href="">What does enctype= "multipart/form-data" mean?</a></div>
+                </div>
+                <div class="rel">
+                    <button>1497</button>
+                    <div class="tx"> <a href="">How does the "this" keyword work,and when should it be uesd?</a></div>
+                </div>
+                <div class="rel">
+                    <button>1663</button>
+                    <div class="tx"><a href="">What is the porpose of the var keyword and when should I use it (or ornit)?</a></div>
+                </div>
+                <div class="rel">
+                    <button>2</button>
+                    <div class="tx"><a href="">Does changing attributes in a container element always cause repaints or reflows</a></div>
+                </div>
+                <div class="rel">
+                    <button>10</button>
+                    <div class="tx"><a href="">How many Reflows does attaching a DocumentFragment Cause?</a></div>
+                </div>
+                <div class="rel">
+                    <button>246</button>
+                    <div class="tx"><a href="">When is JavaScript synchronous?</a></div>
+                </div>
+                <div class="rel">
+                    <button>1</button>
+                    <div class="tx"><a href="">Nested requestAnmationFrame calls - order of repaints and callback invocations</a></div>
+                </div>
+                <div class="rel">
+                    <button>1</button>
+                    <div class="tx"><a href="">When exactly dose the browser repaint and reflow?</a></div>
+                </div>
+                <div class="rel">
+                    <button>4</button>
+                    <div class="tx"><a href="">SvelteJS vs ReactJS rendering difference (repaint / reflow)</a></div>
+                </div>
+            </div>
+
+            <div class="main">
+                <p class="ma">function shallowCopy (params) { 
+                }
+                <br>
+                //样例
+                let params = { a: 1, b: { c: 1 } }
+                <br>
+                let newObj = shallowCopy(params)
+                <br>
+                // 拷贝对象中---基本类型老死不相往来，引用类型藕断丝连
+                params.a = 222
+                params.b.c = 666
+                console.log(params); // { a: 222, b: { c: 666 } }
+                console.log(newObj); // { a: 1, b: { c: 666 } }
+                </p>
+
+                <div class="tip">
+                    <a href=""><b>javascript</b></a>
+                    <a href=""><b>html</b></a>
+                    <a href=""><b>animation</b></a>
+                    <a href=""><b>graphics</b></a>
+                    <a href=""><b>requestanimationframe</b></a>
+                </div>
+
+                <div class="head">
+                    <p class="time2">asked Apr 7.2016 at 3:05</p>
+                    <img src="https://tse1-mm.cn.bing.net/th/id/OIP-C.YKoZzgmubNBxQ8j-mmoTKAHaEK?w=317&h=180&c=7&r=0&o=5&dpr=2&pid=1.7" alt="没有">
+                    <a href="" class="name">Trusktr</a>
+                    <div class="inf">
+                        <p>48.2k</p>
+                        <p>58</p>
+                        <p>204</p>
+                        <p>283</p>
+                    </div>
+                </div>
+
+                <div class="hide">
+                    <img src="https://tse1-mm.cn.bing.net/th/id/OIP-C.YKoZzgmubNBxQ8j-mmoTKAHaEK?w=317&h=180&c=7&r=0&o=5&dpr=2&pid=1.7" alt="没有">
+                    <div class="name2">
+                        <p><b>trusktr</b></p>
+                    </div>
+                    <div class="star">
+                        <p>45.2k</p>
+                        <p>58</p>
+                        <p>204</p>
+                        <p>283</p>
+                    </div>
+                    <div class="address">
+                        <a href="">codepen.io/trukit</a>
+                    </div>
+                    <div class="content">
+                        <p>Joe Pea <a href="">trudktr.io</a>(personal site)</p>
+                        <p><a href="">tume.io(poen source 3D toolkit)</a></p>
+                        <p><a href="">twitter github</a></p>
+                        <p><a href="codepen"></a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="line3"></div>
+       </div>
+
+       <div class="answer">
+            <h3>Your Answer</h3>
+            <textarea name="" id="" rows="15" cols="80"></textarea>
+
+            <div class="boxs1">
+                <h2>Sign up or <a href="">log in</a></h2>
+                <button>Sign up using Google</button>
+                <button>Sign up using Email and Password</button>
+            </div>
+            
+            <div class="boxs2">
+                <h2>Post as a guest</h2>
+                <h3>Name</h3>
+                <input type="text">
+                <h3>Emall</h3>
+                <input type="text">
+            </div>
+
+            <div class="boxs3">
+                <button class="post">Post Your Answer</button>
+                <div class="boxss3">
+                    <p>By clicking "Post  Your Anawer", you artee to our <a href="">terns of service</a>and acknowledge you have read out <a href="">privacy policy</a></p>
+                </div>
+            </div>
+       </div>
+
+       <div class="bottom">
+        <svg t="1731738065722" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4208" width="150px" height="150px"><path d="M620.714667 895.829333L213.376 896 213.333333 808.832l407.338667-0.213333 0.042667 87.210666zM896 402.133333L826.325333 0l-85.76 14.933333 69.674667 402.090667 85.76-14.933333z m-265.472 294.698667l-405.632-37.418667-7.978667 86.826667 405.632 37.376 7.978667-86.784z m26.752-113.749333l-393.386667-105.941334-22.613333 84.181334 393.429333 105.984 22.613334-84.224z m51.370667-99.712L357.76 276.053333 313.6 351.146667l350.890667 207.36 44.202666-75.093334z m86.016-61.013334l-229.504-337.237333-71.893334 49.066667 229.546667 337.237333 71.850667-49.066667z" fill="#FF810F" p-id="4209"></path><path d="M697.770667 597.333333v357.973334h-541.866667V597.333333H85.333333v426.666667h682.666667V597.333333z" fill="#BEBCBC" p-id="4210"></path></svg>
+            <div class="list1">
+                <ul>
+                    <li><a href=""><b>STACK OVERFLOW</b></a></li>
+                    <ul>
+                        <li><a href="">Questions</a></li>
+                        <li><a href="">Help</a></li>
+                        <li><a href="">Chat</a></li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="list2">
+                <ul>
+                    <li><a href=""><b>PRODUCTS</b></a></li>
+                    <ul>
+                        <li><a href="">Tearms</a></li>
+                        <li><a href="">Advertising</a></li>
+                        <li><a href="">Talent</a></li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="list3">
+                <ul>
+                    <li><a href=""><b>COMPANY</b></a></li>
+                    <ul>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Press</a></li>
+                        <li><a href="">Work Here</a></li>
+                        <li><a href="">Legal</a></li>
+                        <li><a href="">Privacy Policy</a></li>
+                        <li><a href="">Terms of Service</a></li>
+                        <li><a href="">Contact Us</a></li>
+                        <li><a href="">CI=ookie Settings</a></li>
+                        <li><a href="">Coolie Policy</a></li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="list4">
+                <ul>
+                    <li><a href=""><b>STSCK EXCHANGE NETWORK</b></a></li>
+                    <ul>
+                        <li><a href="">Technology</a></li>
+                        <li><a href="">Culture & recreation</a></li>
+                        <li><a href="">Life & arts</a></li>
+                        <li><a href="">Science</a></li>
+                        <li><a href="">Professional</a></li>
+                        <li><a href="">Business</a></li>
+                        <li><a href="">API</a></li>
+                        <li><a href="">Data</a></li>
+                    </ul>
+                </ul>
+            </div>
+       </div>
+
+    </div>
+
+    <script>
+        const hide = document.querySelector(`.hide`)
+        const img = document.querySelector(`.head img`)
+        img.addEventListener(`click`,function(){
+            hide.style.display = `block`
+        })
+        img.addEventListener(`blur`,function(){
+            hide.style.display = `none`
+        })
+    </script>
+
+
+</body>
+</html>

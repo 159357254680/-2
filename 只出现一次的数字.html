@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+
+        let singleNumber = function(nums){
+           let flog = true
+           while(flog){
+                if(nums.indexOf(nums[0]) === 1){
+                    nums = nums.filter(function(item){
+                        return item != nums[0]
+                    })
+                    }else{
+                        return nums[0]
+                    }
+           }
+        }
+        let nums = [2,1,4,4,1,6,6]
+        let nums2 = [1,5,5,4,6,8,8]
+        console.log(singleNumber(nums));
+        console.log(singleNumber(nums2));
+        
+        
+        
+        
+
+        
+    </script>
+</body>
+</html>
